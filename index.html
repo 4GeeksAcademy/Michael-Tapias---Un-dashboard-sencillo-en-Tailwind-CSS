@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Marketing para Influencer</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Dashboard de Marketing para Influencer</h1>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="dashboard-block kpi-block">
+      <h2>Bloque superior (KPIs)</h2>
+      <div class="kpi-grid">
+        <article class="kpi-card">
+          <h3>Ventas Totales</h3>
+          <p class="kpi-value positive">0</p>
+        </article>
+        <article class="kpi-card">
+          <h3>Ingresos por Comisiones</h3>
+          <p class="kpi-value positive">0 €</p>
+          <p class="kpi-note">Comisión fija del 15 % por cada venta realizada</p>
+        </article>
+        <article class="kpi-card">
+          <h3>Conversiones Totales</h3>
+          <p class="kpi-value positive">0</p>
+        </article>
+        <article class="kpi-card">
+          <h3>Tasa de Conversión</h3>
+          <p class="kpi-value positive">0%</p>
+        </article>
+        <article class="kpi-card">
+          <h3>Engagement Rate</h3>
+          <p class="kpi-value positive">0%</p>
+        </article>
+        <article class="kpi-card">
+          <h3>ROI</h3>
+          <p class="kpi-value positive">0%</p>
+        </article>
+        <article class="kpi-card">
+          <h3>CTR</h3>
+          <p class="kpi-value positive">0%</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="dashboard-block analysis-block">
+      <h2>Bloque intermedio (Análisis)</h2>
+
+      <section class="panel">
+        <h3>Rendimiento por plataforma</h3>
+        <ul>
+          <li>Instagram</li>
+          <li>TikTok</li>
+          <li>YouTube</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h3>Rendimiento por producto</h3>
+        <ul>
+          <li>Producto A: 50 €</li>
+          <li>Producto B: 120 €</li>
+          <li>Producto C: 80 €</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h3>Embudo de ventas (Funnel)</h3>
+        <p>Visualización del embudo de ventas.</p>
+      </section>
+
+      <section class="panel">
+        <h3>Actividad por plataforma</h3>
+        <p>Resumen de actividad en Instagram, TikTok y YouTube.</p>
+      </section>
+    </section>
+
+    <section class="dashboard-block details-block">
+      <h2>Bloque inferior (Detalles)</h2>
+
+      <section class="panel">
+        <h3>Productos</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Ventas</th>
+              <th>Ingresos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Producto A</td>
+              <td>10</td>
+              <td>50 €</td>
+            </tr>
+            <tr>
+              <td>Producto B</td>
+              <td>24</td>
+              <td>120 €</td>
+            </tr>
+            <tr>
+              <td>Producto C</td>
+              <td>16</td>
+              <td>80 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h3>Plataformas</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Plataforma</th>
+              <th>Clicks</th>
+              <th>Conversiones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Instagram</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>TikTok</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>YouTube</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h3>Campañas</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Campaña</th>
+              <th>Estado</th>
+              <th>Presupuesto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Campaña 1</td>
+              <td>Activa</td>
+              <td>300 €</td>
+            </tr>
+            <tr>
+              <td>Campaña 2</td>
+              <td>Pausada</td>
+              <td>150 €</td>
+            </tr>
+            <tr>
+              <td>Campaña 3</td>
+              <td>Finalizada</td>
+              <td>200 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel alerts-panel">
+        <h3>Alertas</h3>
+        <ul>
+          <li class="alert-ok">Sin alertas críticas.</li>
+          <li class="alert-warning">TikTok: caída de conversiones del 9 % en la última semana.</li>
+          <li class="alert-ok">Instagram: aumento de rendimiento del 12 % en conversiones.</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h3>Top Productos</h3>
+        <ol>
+          <li>Producto B</li>
+          <li>Producto C</li>
+          <li>Producto A</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h3>Top Plataformas</h3>
+        <ol>
+          <li>Instagram</li>
+          <li>YouTube</li>
+          <li>TikTok</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h3>Top Campañas</h3>
+        <ol>
+          <li>Campaña 1</li>
+          <li>Campaña 3</li>
+          <li>Campaña 2</li>
+        </ol>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Dashboard de Marketing para Influencer. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
