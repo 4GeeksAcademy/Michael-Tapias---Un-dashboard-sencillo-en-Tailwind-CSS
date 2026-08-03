@@ -5,214 +5,718 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard de Marketing para Influencer</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="site-header">
-    <h1>Dashboard de Marketing para Influencer</h1>
-  </header>
+<body class="min-h-screen bg-slate-100 text-slate-800 antialiased">
+  <div class="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-700">
+    <header class="mx-auto max-w-7xl px-4 py-8 text-white md:px-6 md:py-10 lg:px-8 lg:py-12">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-100 md:text-sm">Marketing Analytics</p>
+      <h1 class="mt-3 text-2xl font-extrabold tracking-tight md:text-4xl lg:text-5xl">Dashboard de Marketing para Influencer</h1>
+      <p class="mt-2 max-w-2xl text-sm text-cyan-100 md:text-base lg:text-lg">Monitorea rendimiento, conversiones y campañas en un solo panel visual.</p>
+    </header>
+  </div>
 
-  <main class="dashboard-main">
-    <section class="dashboard-block kpi-block">
-      <h2>Bloque superior (KPIs)</h2>
-      <div class="kpi-grid">
-        <article class="kpi-card">
-          <h3>Ventas Totales</h3>
-          <p class="kpi-value positive">0</p>
+  <main class="mx-auto max-w-7xl space-y-6 px-4 pb-10 pt-6 md:space-y-8 md:px-6 md:pb-12 md:pt-8 lg:space-y-10 lg:px-8 lg:pb-16">
+    <section aria-labelledby="kpis-title" class="space-y-4">
+      <h2 id="kpis-title" class="text-xl font-bold tracking-tight text-slate-900 md:text-2xl lg:text-3xl">Bloque superior (KPIs)</h2>
+      <div class="grid gap-3 md:grid-cols-2 md:gap-4 lg:grid-cols-4 lg:gap-5">
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-100 md:p-5 lg:p-6">
+          <h3 class="text-sm font-medium text-slate-500">Comision por venta (15%)</h3>
+          <p id="kpi-commission-per-sale" class="mt-2 text-2xl font-bold text-slate-900 md:mt-3 md:text-3xl lg:text-4xl">-</p>
         </article>
-        <article class="kpi-card">
-          <h3>Ingresos por Comisiones</h3>
-          <p class="kpi-value positive">0 €</p>
-          <p class="kpi-note">Comisión fija del 15 % por cada venta realizada</p>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-100 md:p-5 lg:p-6">
+          <h3 class="text-sm font-medium text-slate-500">Ventas Totales</h3>
+          <p id="kpi-total-sales" class="mt-2 text-2xl font-bold text-slate-900 md:mt-3 md:text-3xl lg:text-4xl">-</p>
         </article>
-        <article class="kpi-card">
-          <h3>Conversiones Totales</h3>
-          <p class="kpi-value positive">0</p>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-100 md:p-5 lg:p-6">
+          <h3 class="text-sm font-medium text-slate-500">Ingresos por Comisiones</h3>
+          <p id="kpi-commission-revenue" class="mt-2 text-2xl font-bold text-emerald-600 md:mt-3 md:text-3xl lg:text-4xl">-</p>
+          <p id="kpi-commission-note" class="mt-1 text-xs text-slate-500">-</p>
         </article>
-        <article class="kpi-card">
-          <h3>Tasa de Conversión</h3>
-          <p class="kpi-value positive">0%</p>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-100 md:p-5 lg:p-6">
+          <h3 class="text-sm font-medium text-slate-500">Conversiones Totales</h3>
+          <p id="kpi-total-conversions" class="mt-2 text-2xl font-bold text-slate-900 md:mt-3 md:text-3xl lg:text-4xl">-</p>
         </article>
-        <article class="kpi-card">
-          <h3>Engagement Rate</h3>
-          <p class="kpi-value positive">0%</p>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-100 md:p-5 lg:p-6">
+          <h3 class="text-sm font-medium text-slate-500">Tasa de Conversión</h3>
+          <p id="kpi-conversion-rate" class="mt-2 text-2xl font-bold text-slate-900 md:mt-3 md:text-3xl lg:text-4xl">-</p>
         </article>
-        <article class="kpi-card">
-          <h3>ROI</h3>
-          <p class="kpi-value positive">0%</p>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-100 md:p-5 lg:p-6">
+          <h3 class="text-sm font-medium text-slate-500">Engagement Rate</h3>
+          <p id="kpi-engagement-rate" class="mt-2 text-2xl font-bold text-slate-900 md:mt-3 md:text-3xl lg:text-4xl">-</p>
         </article>
-        <article class="kpi-card">
-          <h3>CTR</h3>
-          <p class="kpi-value positive">0%</p>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-100 md:p-5 lg:p-6">
+          <h3 class="text-sm font-medium text-slate-500">CTR</h3>
+          <p id="kpi-ctr" class="mt-2 text-2xl font-bold text-slate-900 md:mt-3 md:text-3xl lg:text-4xl">-</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-100 md:col-span-2 md:p-5 lg:col-span-1 lg:p-6">
+          <h3 class="text-sm font-medium text-slate-500">ROI</h3>
+          <p id="kpi-roi" class="mt-2 text-2xl font-bold text-slate-900 md:mt-3 md:text-3xl lg:text-4xl">-</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm ring-1 ring-slate-100 md:col-span-2 lg:col-span-2 md:p-5 lg:p-6">
+          <h3 class="text-sm font-medium text-slate-500">Precio Promedio de Venta</h3>
+          <p id="kpi-average-ticket" class="mt-2 text-2xl font-bold text-indigo-600 md:mt-3 md:text-3xl lg:text-4xl">-</p>
         </article>
       </div>
     </section>
 
-    <section class="dashboard-block analysis-block">
-      <h2>Bloque intermedio (Análisis)</h2>
+    <section aria-labelledby="analysis-title" class="space-y-4">
+      <h2 id="analysis-title" class="text-xl font-bold tracking-tight text-slate-900 md:text-2xl lg:text-3xl">Bloque intermedio</h2>
+      <div class="grid gap-3 md:grid-cols-2 md:gap-4 lg:grid-cols-2 lg:gap-5">
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5 lg:p-6">
+          <h3 class="text-base font-semibold text-slate-900 md:text-lg">Rendimiento por plataforma</h3>
+          <ul id="platform-revenue-list" class="mt-3 space-y-2 text-sm text-slate-700 md:mt-4"></ul>
+        </article>
 
-      <section class="panel">
-        <h3>Rendimiento por plataforma</h3>
-        <ul>
-          <li>Instagram</li>
-          <li>TikTok</li>
-          <li>YouTube</li>
-        </ul>
-      </section>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5 lg:p-6">
+          <h3 class="text-base font-semibold text-slate-900 md:text-lg">Rendimiento por producto</h3>
+          <ul id="product-revenue-list" class="mt-3 space-y-2 text-sm text-slate-700 md:mt-4"></ul>
+        </article>
 
-      <section class="panel">
-        <h3>Rendimiento por producto</h3>
-        <ul>
-          <li>Producto A: 50 €</li>
-          <li>Producto B: 120 €</li>
-          <li>Producto C: 80 €</li>
-        </ul>
-      </section>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5 lg:p-6">
+          <h3 class="text-base font-semibold text-slate-900 md:text-lg">Embudo de ventas (Funnel)</h3>
+          <div class="mt-3 space-y-2 text-xs font-medium text-slate-700 md:mt-4 md:text-sm">
+            <div id="funnel-impressions" class="rounded-lg bg-cyan-100 px-3 py-2 text-center md:px-4 md:py-2.5">Impresiones: -</div>
+            <div id="funnel-clicks" class="mx-auto w-11/12 rounded-lg bg-cyan-200 px-3 py-2 text-center md:px-4 md:py-2.5">Clicks: -</div>
+            <div id="funnel-leads" class="mx-auto w-10/12 rounded-lg bg-cyan-300 px-3 py-2 text-center md:px-4 md:py-2.5">Leads: -</div>
+            <div id="funnel-purchases" class="mx-auto w-9/12 rounded-lg bg-cyan-400 px-3 py-2 text-center text-cyan-950 md:px-4 md:py-2.5">Compras: -</div>
+          </div>
+        </article>
 
-      <section class="panel">
-        <h3>Embudo de ventas (Funnel)</h3>
-        <p>Visualización del embudo de ventas.</p>
-      </section>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5 lg:p-6">
+          <h3 class="text-base font-semibold text-slate-900 md:text-lg">Actividad por plataforma</h3>
+          <div id="platform-engagement-bars" class="mt-3 space-y-3 text-sm text-slate-700 md:mt-4"></div>
+        </article>
 
-      <section class="panel">
-        <h3>Actividad por plataforma</h3>
-        <p>Resumen de actividad en Instagram, TikTok y YouTube.</p>
-      </section>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:col-span-2 md:p-5 lg:col-span-2 lg:p-6">
+          <h3 class="text-base font-semibold text-slate-900 md:text-lg">Graficos clave (Ingresos por producto y ROI por plataforma)</h3>
+          <div class="mt-3 grid gap-4 md:mt-4 md:grid-cols-2">
+            <div>
+              <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Ingresos por producto</p>
+              <div id="product-revenue-bars" class="space-y-3"></div>
+            </div>
+            <div>
+              <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">ROI por plataforma</p>
+              <div id="platform-roi-bars" class="space-y-3"></div>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="dashboard-block details-block">
-      <h2>Bloque inferior (Detalles)</h2>
+    <section aria-labelledby="details-title" class="space-y-4">
+      <h2 id="details-title" class="text-xl font-bold tracking-tight text-slate-900 md:text-2xl lg:text-3xl">Bloque inferior</h2>
 
-      <section class="panel">
-        <h3>Productos</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Producto</th>
-              <th>Ventas</th>
-              <th>Ingresos</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Producto A</td>
-              <td>10</td>
-              <td>50 €</td>
-            </tr>
-            <tr>
-              <td>Producto B</td>
-              <td>24</td>
-              <td>120 €</td>
-            </tr>
-            <tr>
-              <td>Producto C</td>
-              <td>16</td>
-              <td>80 €</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+      <div class="grid gap-3 md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-5">
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:col-span-2 md:p-5 lg:col-span-2 lg:p-6">
+          <h3 class="text-base font-semibold text-slate-900 md:text-lg">Productos</h3>
+          <div class="mt-3 overflow-x-auto md:mt-4">
+            <table class="min-w-[560px] text-left text-xs md:min-w-full md:text-sm">
+              <thead class="text-slate-500">
+                <tr>
+                  <th class="border-b border-slate-200 px-2 py-2 font-semibold">Producto</th>
+                  <th class="border-b border-slate-200 px-2 py-2 font-semibold">Precio</th>
+                  <th class="border-b border-slate-200 px-2 py-2 font-semibold">Ventas</th>
+                  <th class="border-b border-slate-200 px-2 py-2 font-semibold">Ingresos</th>
+                  <th class="border-b border-slate-200 px-2 py-2 font-semibold">Engagement</th>
+                </tr>
+              </thead>
+              <tbody id="products-table-body" class="text-slate-700"></tbody>
+            </table>
+          </div>
+        </article>
 
-      <section class="panel">
-        <h3>Plataformas</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Plataforma</th>
-              <th>Clicks</th>
-              <th>Conversiones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Instagram</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>TikTok</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>YouTube</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5 lg:p-6">
+          <h3 class="text-base font-semibold text-slate-900 md:text-lg">Alertas</h3>
+          <ul id="alerts-list" class="mt-3 space-y-2 text-sm text-slate-700 md:mt-4"></ul>
+        </article>
 
-      <section class="panel">
-        <h3>Campañas</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Campaña</th>
-              <th>Estado</th>
-              <th>Presupuesto</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Campaña 1</td>
-              <td>Activa</td>
-              <td>300 €</td>
-            </tr>
-            <tr>
-              <td>Campaña 2</td>
-              <td>Pausada</td>
-              <td>150 €</td>
-            </tr>
-            <tr>
-              <td>Campaña 3</td>
-              <td>Finalizada</td>
-              <td>200 €</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:col-span-2 md:p-5 lg:col-span-3 lg:p-6">
+          <h3 class="text-base font-semibold text-slate-900 md:text-lg">Plataformas y Campanas</h3>
+          <div class="mt-3 grid gap-3 md:mt-4 md:gap-4 lg:grid-cols-2">
+            <div class="overflow-x-auto rounded-xl border border-slate-100">
+              <table class="min-w-[520px] text-left text-xs md:min-w-full md:text-sm">
+                <thead class="bg-slate-50 text-slate-500">
+                  <tr>
+                    <th class="px-2 py-2 font-semibold">Plataforma</th>
+                    <th class="px-2 py-2 font-semibold">Clicks</th>
+                    <th class="px-2 py-2 font-semibold">Conversiones</th>
+                    <th class="px-2 py-2 font-semibold">Conv. Rate</th>
+                    <th class="px-2 py-2 font-semibold">Engagement</th>
+                    <th class="px-2 py-2 font-semibold">ROI</th>
+                  </tr>
+                </thead>
+                <tbody id="platforms-table-body" class="text-slate-700"></tbody>
+              </table>
+            </div>
 
-      <section class="panel alerts-panel">
-        <h3>Alertas</h3>
-        <ul>
-          <li class="alert-ok">Sin alertas críticas.</li>
-          <li class="alert-warning">TikTok: caída de conversiones del 9 % en la última semana.</li>
-          <li class="alert-ok">Instagram: aumento de rendimiento del 12 % en conversiones.</li>
-        </ul>
-      </section>
+            <div class="overflow-x-auto rounded-xl border border-slate-100">
+              <table class="min-w-[520px] text-left text-xs md:min-w-full md:text-sm">
+                <thead class="bg-slate-50 text-slate-500">
+                  <tr>
+                    <th class="px-2 py-2 font-semibold">Campana</th>
+                    <th class="px-2 py-2 font-semibold">Estado</th>
+                    <th class="px-2 py-2 font-semibold">Presupuesto</th>
+                    <th class="px-2 py-2 font-semibold">Ingresos</th>
+                  </tr>
+                </thead>
+                <tbody id="campaigns-table-body" class="text-slate-700"></tbody>
+              </table>
+            </div>
+          </div>
+        </article>
 
-      <section class="panel">
-        <h3>Top Productos</h3>
-        <ol>
-          <li>Producto B</li>
-          <li>Producto C</li>
-          <li>Producto A</li>
-        </ol>
-      </section>
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:col-span-2 md:p-5 lg:col-span-3 lg:p-6">
+          <h3 class="text-base font-semibold text-slate-900 md:text-lg">Top Productos, Top Plataformas y Top Campanas</h3>
+          <div class="mt-3 grid gap-3 md:mt-4 md:grid-cols-3 md:gap-4">
+            <section class="rounded-xl bg-slate-50 p-3 md:p-4">
+              <h4 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Top Productos</h4>
+              <ol id="top-products" class="mt-3 list-decimal space-y-1 pl-5 text-sm text-slate-700"></ol>
+            </section>
+            <section class="rounded-xl bg-slate-50 p-3 md:p-4">
+              <h4 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Top Plataformas</h4>
+              <ol id="top-platforms" class="mt-3 list-decimal space-y-1 pl-5 text-sm text-slate-700"></ol>
+            </section>
+            <section class="rounded-xl bg-slate-50 p-3 md:p-4">
+              <h4 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Top Campanas</h4>
+              <ol id="top-campaigns" class="mt-3 list-decimal space-y-1 pl-5 text-sm text-slate-700"></ol>
+            </section>
+          </div>
+        </article>
 
-      <section class="panel">
-        <h3>Top Plataformas</h3>
-        <ol>
-          <li>Instagram</li>
-          <li>YouTube</li>
-          <li>TikTok</li>
-        </ol>
-      </section>
+        <article class="rounded-2xl border border-cyan-200 bg-cyan-50 p-4 shadow-sm md:col-span-2 md:p-5 lg:col-span-3 lg:p-6">
+          <h3 class="text-base font-semibold text-cyan-900 md:text-lg">Respuestas del negocio</h3>
+          <div class="mt-3 grid gap-3 text-sm text-cyan-900 md:grid-cols-2 lg:grid-cols-5">
+            <p id="answer-commissions" class="rounded-lg bg-white/80 p-3">-</p>
+            <p id="answer-best-product" class="rounded-lg bg-white/80 p-3">-</p>
+            <p id="answer-conversion" class="rounded-lg bg-white/80 p-3">-</p>
+            <p id="answer-best-roi" class="rounded-lg bg-white/80 p-3">-</p>
+            <p class="rounded-lg bg-white/80 p-3">Engagement por plataforma y producto incluido en tablas y graficos.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <section class="panel">
-        <h3>Top Campañas</h3>
-        <ol>
-          <li>Campaña 1</li>
-          <li>Campaña 3</li>
-          <li>Campaña 2</li>
-        </ol>
-      </section>
+    <section aria-labelledby="filters-title" class="space-y-4">
+      <h2 id="filters-title" class="text-xl font-bold tracking-tight text-slate-900 md:text-2xl lg:text-3xl">Analisis detallado filtrable</h2>
+
+      <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5 lg:p-6">
+        <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-5">
+          <label class="space-y-1 text-sm font-medium text-slate-700">
+            <span>Plataforma</span>
+            <select id="filter-platform" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm">
+              <option value="all">Todas</option>
+            </select>
+          </label>
+
+          <label class="space-y-1 text-sm font-medium text-slate-700">
+            <span>Producto</span>
+            <select id="filter-product" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm">
+              <option value="all">Todos</option>
+            </select>
+          </label>
+
+          <label class="space-y-1 text-sm font-medium text-slate-700">
+            <span>Campana</span>
+            <select id="filter-campaign" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm">
+              <option value="all">Todas</option>
+            </select>
+          </label>
+
+          <label class="space-y-1 text-sm font-medium text-slate-700">
+            <span>Desde</span>
+            <input id="filter-start-date" type="date" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm">
+          </label>
+
+          <label class="space-y-1 text-sm font-medium text-slate-700">
+            <span>Hasta</span>
+            <input id="filter-end-date" type="date" class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm">
+          </label>
+        </div>
+
+        <div class="mt-3 flex flex-wrap items-center gap-3">
+          <button id="filter-reset" type="button" class="rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-700">Limpiar filtros</button>
+          <p id="filtered-records-summary" class="text-sm text-slate-600">-</p>
+        </div>
+      </article>
+
+      <div class="grid gap-3 md:gap-4 lg:gap-5">
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5 lg:p-6">
+          <h3 class="text-base font-semibold text-slate-900 md:text-lg">Tabla detallada de Productos</h3>
+          <div class="mt-3 overflow-x-auto md:mt-4">
+            <table class="min-w-[900px] text-left text-xs md:min-w-full md:text-sm">
+              <thead class="bg-slate-50 text-slate-500">
+                <tr>
+                  <th class="px-2 py-2 font-semibold">Producto</th>
+                  <th class="px-2 py-2 font-semibold">Precio</th>
+                  <th class="px-2 py-2 font-semibold">Alcance</th>
+                  <th class="px-2 py-2 font-semibold">Clicks</th>
+                  <th class="px-2 py-2 font-semibold">Conversiones</th>
+                  <th class="px-2 py-2 font-semibold">Ingresos</th>
+                  <th class="px-2 py-2 font-semibold">Comisiones</th>
+                  <th class="px-2 py-2 font-semibold">Engagement</th>
+                  <th class="px-2 py-2 font-semibold">Rendimiento (ROI)</th>
+                </tr>
+              </thead>
+              <tbody id="detailed-products-table-body" class="text-slate-700"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5 lg:p-6">
+          <h3 class="text-base font-semibold text-slate-900 md:text-lg">Tabla detallada de Plataformas</h3>
+          <div class="mt-3 overflow-x-auto md:mt-4">
+            <table class="min-w-[900px] text-left text-xs md:min-w-full md:text-sm">
+              <thead class="bg-slate-50 text-slate-500">
+                <tr>
+                  <th class="px-2 py-2 font-semibold">Plataforma</th>
+                  <th class="px-2 py-2 font-semibold">Alcance</th>
+                  <th class="px-2 py-2 font-semibold">Clicks</th>
+                  <th class="px-2 py-2 font-semibold">Conversiones</th>
+                  <th class="px-2 py-2 font-semibold">CTR</th>
+                  <th class="px-2 py-2 font-semibold">Conv. Rate</th>
+                  <th class="px-2 py-2 font-semibold">Ingresos</th>
+                  <th class="px-2 py-2 font-semibold">Comisiones</th>
+                  <th class="px-2 py-2 font-semibold">Engagement</th>
+                  <th class="px-2 py-2 font-semibold">Rendimiento (ROI)</th>
+                </tr>
+              </thead>
+              <tbody id="detailed-platforms-table-body" class="text-slate-700"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-5 lg:p-6">
+          <h3 class="text-base font-semibold text-slate-900 md:text-lg">Tabla detallada de Campanas</h3>
+          <div class="mt-3 overflow-x-auto md:mt-4">
+            <table class="min-w-[1000px] text-left text-xs md:min-w-full md:text-sm">
+              <thead class="bg-slate-50 text-slate-500">
+                <tr>
+                  <th class="px-2 py-2 font-semibold">Campana</th>
+                  <th class="px-2 py-2 font-semibold">Plataforma</th>
+                  <th class="px-2 py-2 font-semibold">Producto top</th>
+                  <th class="px-2 py-2 font-semibold">Alcance</th>
+                  <th class="px-2 py-2 font-semibold">Clicks</th>
+                  <th class="px-2 py-2 font-semibold">Conversiones</th>
+                  <th class="px-2 py-2 font-semibold">Ingresos</th>
+                  <th class="px-2 py-2 font-semibold">Comisiones</th>
+                  <th class="px-2 py-2 font-semibold">Engagement</th>
+                  <th class="px-2 py-2 font-semibold">Rendimiento (ROI)</th>
+                </tr>
+              </thead>
+              <tbody id="detailed-campaigns-table-body" class="text-slate-700"></tbody>
+            </table>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="mt-8 border-t border-slate-200 bg-white/70 px-4 py-5 text-center text-xs text-slate-600 backdrop-blur md:mt-10 md:px-6 md:py-6 md:text-sm lg:px-8">
     <p>&copy; 2026 Dashboard de Marketing para Influencer. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    const commissionRate = 0.15;
+
+    const products = [
+      { name: "Producto A", price: 50, sales: 32, engagement: 5.2 },
+      { name: "Producto B", price: 120, sales: 41, engagement: 7.8 },
+      { name: "Producto C", price: 80, sales: 31, engagement: 6.4 }
+    ];
+
+    const platforms = [
+      { name: "Instagram", impressions: 28000, clicks: 1200, conversions: 42, engagement: 8.4, spend: 900, revenue: 3600, campaign: "Campana Instagram" },
+      { name: "TikTok", impressions: 26000, clicks: 1500, conversions: 30, engagement: 6.1, spend: 700, revenue: 2700, campaign: "Campana TikTok" },
+      { name: "YouTube", impressions: 18000, clicks: 800, conversions: 32, engagement: 7.2, spend: 500, revenue: 2700, campaign: "Campana YouTube" }
+    ];
+
+    const formatNumber = (value) => new Intl.NumberFormat("es-ES").format(value);
+    const formatMoney = (value) => new Intl.NumberFormat("es-ES", {
+      style: "currency",
+      currency: "EUR",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(value);
+    const formatPercent = (value) => `${new Intl.NumberFormat("es-ES", { maximumFractionDigits: 2 }).format(value)} %`;
+
+    products.forEach((product) => {
+      product.revenue = product.price * product.sales;
+      product.commission = product.revenue * commissionRate;
+    });
+
+    platforms.forEach((platform) => {
+      platform.conversionRate = platform.clicks ? (platform.conversions / platform.clicks) * 100 : 0;
+      platform.roi = platform.spend ? ((platform.revenue - platform.spend) / platform.spend) * 100 : 0;
+    });
+
+    const totalRevenue = products.reduce((acc, product) => acc + product.revenue, 0);
+    const totalSales = products.reduce((acc, product) => acc + product.sales, 0);
+    const totalImpressions = platforms.reduce((acc, platform) => acc + platform.impressions, 0);
+    const totalClicks = platforms.reduce((acc, platform) => acc + platform.clicks, 0);
+    const totalConversions = platforms.reduce((acc, platform) => acc + platform.conversions, 0);
+    const totalSpend = platforms.reduce((acc, platform) => acc + platform.spend, 0);
+    const totalCommissionRevenue = totalRevenue * commissionRate;
+    const commissionPerSale = totalSales ? totalCommissionRevenue / totalSales : 0;
+    const conversionRate = totalClicks ? (totalConversions / totalClicks) * 100 : 0;
+    const ctr = totalImpressions ? (totalClicks / totalImpressions) * 100 : 0;
+    const engagementRate = platforms.reduce((acc, platform) => acc + platform.engagement, 0) / platforms.length;
+    const roi = totalSpend ? ((totalRevenue - totalSpend) / totalSpend) * 100 : 0;
+    const averageTicket = totalSales ? totalRevenue / totalSales : 0;
+    const estimatedLeads = Math.round(totalClicks * 0.183);
+
+    document.getElementById("kpi-commission-per-sale").textContent = formatMoney(commissionPerSale);
+    document.getElementById("kpi-total-sales").textContent = formatNumber(totalSales);
+    document.getElementById("kpi-commission-revenue").textContent = formatMoney(totalCommissionRevenue);
+    document.getElementById("kpi-commission-note").textContent = `15 % sobre ${formatMoney(totalRevenue)} en ventas`;
+    document.getElementById("kpi-total-conversions").textContent = formatNumber(totalConversions);
+    document.getElementById("kpi-conversion-rate").textContent = formatPercent(conversionRate);
+    document.getElementById("kpi-engagement-rate").textContent = formatPercent(engagementRate);
+    document.getElementById("kpi-ctr").textContent = formatPercent(ctr);
+    document.getElementById("kpi-roi").textContent = formatPercent(roi);
+    document.getElementById("kpi-average-ticket").textContent = formatMoney(averageTicket);
+
+    document.getElementById("funnel-impressions").textContent = `Impresiones: ${formatNumber(totalImpressions)}`;
+    document.getElementById("funnel-clicks").textContent = `Clicks: ${formatNumber(totalClicks)}`;
+    document.getElementById("funnel-leads").textContent = `Leads: ${formatNumber(estimatedLeads)}`;
+    document.getElementById("funnel-purchases").textContent = `Compras: ${formatNumber(totalConversions)}`;
+
+    const productsTableBody = document.getElementById("products-table-body");
+    const productRevenueList = document.getElementById("product-revenue-list");
+    const productRevenueBars = document.getElementById("product-revenue-bars");
+    const topProducts = document.getElementById("top-products");
+    const maxProductRevenue = Math.max(...products.map((product) => product.revenue));
+
+    products.forEach((product, index) => {
+      const borderClass = index < products.length - 1 ? "border-b border-slate-100" : "";
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td class="${borderClass} px-2 py-2">${product.name}</td>
+        <td class="${borderClass} px-2 py-2">${formatMoney(product.price)}</td>
+        <td class="${borderClass} px-2 py-2">${formatNumber(product.sales)}</td>
+        <td class="${borderClass} px-2 py-2">${formatMoney(product.revenue)}</td>
+        <td class="${borderClass} px-2 py-2">${formatPercent(product.engagement)}</td>
+      `;
+      productsTableBody.appendChild(row);
+
+      const listItem = document.createElement("li");
+      listItem.className = "flex items-center justify-between rounded-lg bg-slate-50 px-3 py-2";
+      listItem.innerHTML = `<span>${product.name} (${formatNumber(product.sales)} ventas)</span><span class="font-semibold">${formatMoney(product.revenue)}</span>`;
+      productRevenueList.appendChild(listItem);
+
+      const barGroup = document.createElement("div");
+      const width = (product.revenue / maxProductRevenue) * 100;
+      barGroup.innerHTML = `
+        <div class="mb-1 flex justify-between text-xs text-slate-600"><span>${product.name}</span><span>${formatMoney(product.revenue)}</span></div>
+        <div class="h-2.5 rounded-full bg-slate-200"><div class="h-2.5 rounded-full bg-indigo-500" style="width: ${width.toFixed(1)}%"></div></div>
+      `;
+      productRevenueBars.appendChild(barGroup);
+    });
+
+    const topProductsSorted = [...products].sort((a, b) => b.revenue - a.revenue);
+    topProductsSorted.forEach((product) => {
+      const item = document.createElement("li");
+      item.textContent = `${product.name} (${formatMoney(product.revenue)})`;
+      topProducts.appendChild(item);
+    });
+
+    const platformsTableBody = document.getElementById("platforms-table-body");
+    const platformRevenueList = document.getElementById("platform-revenue-list");
+    const platformEngagementBars = document.getElementById("platform-engagement-bars");
+    const platformRoiBars = document.getElementById("platform-roi-bars");
+    const topPlatforms = document.getElementById("top-platforms");
+    const maxRoi = Math.max(...platforms.map((platform) => platform.roi));
+
+    platforms.forEach((platform) => {
+      const row = document.createElement("tr");
+      row.className = "border-t border-slate-100";
+      row.innerHTML = `
+        <td class="px-2 py-2">${platform.name}</td>
+        <td class="px-2 py-2">${formatNumber(platform.clicks)}</td>
+        <td class="px-2 py-2">${formatNumber(platform.conversions)}</td>
+        <td class="px-2 py-2">${formatPercent(platform.conversionRate)}</td>
+        <td class="px-2 py-2">${formatPercent(platform.engagement)}</td>
+        <td class="px-2 py-2">${formatPercent(platform.roi)}</td>
+      `;
+      platformsTableBody.appendChild(row);
+
+      const revenueItem = document.createElement("li");
+      revenueItem.className = "flex items-center justify-between rounded-lg bg-slate-50 px-3 py-2";
+      revenueItem.innerHTML = `<span>${platform.name}</span><span class="font-semibold text-emerald-600">${formatMoney(platform.revenue)}</span>`;
+      platformRevenueList.appendChild(revenueItem);
+
+      const engagementBar = document.createElement("div");
+      engagementBar.innerHTML = `
+        <div class="mb-1 flex justify-between"><span>${platform.name}</span><span>${formatPercent(platform.engagement)}</span></div>
+        <div class="h-2 rounded-full bg-slate-200 md:h-2.5"><div class="h-2 rounded-full bg-pink-500 md:h-2.5" style="width: ${(platform.engagement * 10).toFixed(1)}%"></div></div>
+      `;
+      platformEngagementBars.appendChild(engagementBar);
+
+      const roiBar = document.createElement("div");
+      const width = (platform.roi / maxRoi) * 100;
+      roiBar.innerHTML = `
+        <div class="mb-1 flex justify-between text-xs text-slate-600"><span>${platform.name}</span><span>${formatPercent(platform.roi)}</span></div>
+        <div class="h-2.5 rounded-full bg-slate-200"><div class="h-2.5 rounded-full bg-emerald-500" style="width: ${width.toFixed(1)}%"></div></div>
+      `;
+      platformRoiBars.appendChild(roiBar);
+    });
+
+    const campaignsTableBody = document.getElementById("campaigns-table-body");
+    const topCampaigns = document.getElementById("top-campaigns");
+
+    platforms.forEach((platform) => {
+      const row = document.createElement("tr");
+      row.className = "border-t border-slate-100";
+      row.innerHTML = `
+        <td class="px-2 py-2">${platform.campaign}</td>
+        <td class="px-2 py-2">Activa</td>
+        <td class="px-2 py-2">${formatMoney(platform.spend)}</td>
+        <td class="px-2 py-2">${formatMoney(platform.revenue)}</td>
+      `;
+      campaignsTableBody.appendChild(row);
+    });
+
+    const topPlatformsSorted = [...platforms].sort((a, b) => b.roi - a.roi);
+    topPlatformsSorted.forEach((platform) => {
+      const item = document.createElement("li");
+      item.textContent = `${platform.name} (ROI ${formatPercent(platform.roi)})`;
+      topPlatforms.appendChild(item);
+    });
+
+    topPlatformsSorted.forEach((platform) => {
+      const item = document.createElement("li");
+      item.textContent = `${platform.campaign}`;
+      topCampaigns.appendChild(item);
+    });
+
+    const alertsList = document.getElementById("alerts-list");
+    const worstConversionPlatform = [...platforms].sort((a, b) => a.conversionRate - b.conversionRate)[0];
+    const bestRoiPlatform = topPlatformsSorted[0];
+    const bestProduct = topProductsSorted[0];
+
+    const alertItems = [
+      { text: `Comisiones generadas: ${formatMoney(totalCommissionRevenue)} con tasa fija de 15 %.`, className: "rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-emerald-700" },
+      { text: `${worstConversionPlatform.name} tiene la conversion mas baja: ${formatPercent(worstConversionPlatform.conversionRate)}.`, className: "rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-amber-700" },
+      { text: `${bestRoiPlatform.name} lidera el ROI con ${formatPercent(bestRoiPlatform.roi)} y engagement de ${formatPercent(bestRoiPlatform.engagement)}.`, className: "rounded-lg border border-sky-200 bg-sky-50 px-3 py-2 text-sky-700" }
+    ];
+
+    alertItems.forEach((alert) => {
+      const li = document.createElement("li");
+      li.className = alert.className;
+      li.textContent = alert.text;
+      alertsList.appendChild(li);
+    });
+
+    document.getElementById("answer-commissions").innerHTML = `Comisiones generadas: <span class="font-semibold">${formatMoney(totalCommissionRevenue)}</span>.`;
+    document.getElementById("answer-best-product").innerHTML = `Producto con mayor ingreso: <span class="font-semibold">${bestProduct.name} (${formatMoney(bestProduct.revenue)})</span>.`;
+    document.getElementById("answer-conversion").innerHTML = `Conversion de anuncios: <span class="font-semibold">${formatPercent(conversionRate)}</span> global.`;
+    document.getElementById("answer-best-roi").innerHTML = `Mejor ROI por plataforma: <span class="font-semibold">${bestRoiPlatform.name} (${formatPercent(bestRoiPlatform.roi)})</span>.`;
+
+    const detailedRecords = [
+      { date: "2026-07-01", platform: "Instagram", campaign: "Campana Instagram", product: "Producto A", price: 50, reach: 1400, clicks: 65, conversions: 3, engagement: 8.5, spend: 40 },
+      { date: "2026-07-01", platform: "Instagram", campaign: "Campana Instagram", product: "Producto B", price: 120, reach: 1600, clicks: 78, conversions: 4, engagement: 8.7, spend: 70 },
+      { date: "2026-07-01", platform: "Instagram", campaign: "Campana Instagram", product: "Producto C", price: 80, reach: 1300, clicks: 57, conversions: 3, engagement: 8.1, spend: 50 },
+      { date: "2026-07-08", platform: "Instagram", campaign: "Campana Instagram", product: "Producto A", price: 50, reach: 1500, clicks: 70, conversions: 4, engagement: 8.6, spend: 45 },
+      { date: "2026-07-08", platform: "Instagram", campaign: "Campana Instagram", product: "Producto B", price: 120, reach: 1700, clicks: 85, conversions: 5, engagement: 8.9, spend: 80 },
+      { date: "2026-07-08", platform: "Instagram", campaign: "Campana Instagram", product: "Producto C", price: 80, reach: 1350, clicks: 62, conversions: 3, engagement: 8.2, spend: 52 },
+      { date: "2026-07-01", platform: "TikTok", campaign: "Campana TikTok", product: "Producto A", price: 50, reach: 1800, clicks: 90, conversions: 2, engagement: 6.2, spend: 45 },
+      { date: "2026-07-01", platform: "TikTok", campaign: "Campana TikTok", product: "Producto B", price: 120, reach: 2000, clicks: 105, conversions: 3, engagement: 6.3, spend: 65 },
+      { date: "2026-07-01", platform: "TikTok", campaign: "Campana TikTok", product: "Producto C", price: 80, reach: 1700, clicks: 88, conversions: 2, engagement: 6.0, spend: 48 },
+      { date: "2026-07-08", platform: "TikTok", campaign: "Campana TikTok", product: "Producto A", price: 50, reach: 1900, clicks: 95, conversions: 3, engagement: 6.1, spend: 47 },
+      { date: "2026-07-08", platform: "TikTok", campaign: "Campana TikTok", product: "Producto B", price: 120, reach: 2100, clicks: 112, conversions: 4, engagement: 6.4, spend: 70 },
+      { date: "2026-07-08", platform: "TikTok", campaign: "Campana TikTok", product: "Producto C", price: 80, reach: 1750, clicks: 90, conversions: 2, engagement: 6.0, spend: 50 },
+      { date: "2026-07-01", platform: "YouTube", campaign: "Campana YouTube", product: "Producto A", price: 50, reach: 1100, clicks: 55, conversions: 3, engagement: 7.1, spend: 32 },
+      { date: "2026-07-01", platform: "YouTube", campaign: "Campana YouTube", product: "Producto B", price: 120, reach: 1300, clicks: 62, conversions: 4, engagement: 7.4, spend: 52 },
+      { date: "2026-07-01", platform: "YouTube", campaign: "Campana YouTube", product: "Producto C", price: 80, reach: 1000, clicks: 48, conversions: 3, engagement: 7.0, spend: 38 },
+      { date: "2026-07-08", platform: "YouTube", campaign: "Campana YouTube", product: "Producto A", price: 50, reach: 1200, clicks: 58, conversions: 3, engagement: 7.2, spend: 35 },
+      { date: "2026-07-08", platform: "YouTube", campaign: "Campana YouTube", product: "Producto B", price: 120, reach: 1400, clicks: 66, conversions: 5, engagement: 7.5, spend: 55 },
+      { date: "2026-07-08", platform: "YouTube", campaign: "Campana YouTube", product: "Producto C", price: 80, reach: 1050, clicks: 50, conversions: 3, engagement: 7.1, spend: 40 }
+    ];
+
+    detailedRecords.forEach((record) => {
+      record.revenue = record.price * record.conversions;
+      record.commission = record.revenue * commissionRate;
+      record.ctr = record.reach ? (record.clicks / record.reach) * 100 : 0;
+      record.conversionRate = record.clicks ? (record.conversions / record.clicks) * 100 : 0;
+      record.roi = record.spend ? ((record.revenue - record.spend) / record.spend) * 100 : 0;
+    });
+
+    const filterPlatform = document.getElementById("filter-platform");
+    const filterProduct = document.getElementById("filter-product");
+    const filterCampaign = document.getElementById("filter-campaign");
+    const filterStartDate = document.getElementById("filter-start-date");
+    const filterEndDate = document.getElementById("filter-end-date");
+    const filterReset = document.getElementById("filter-reset");
+    const filteredRecordsSummary = document.getElementById("filtered-records-summary");
+
+    const detailedProductsTableBody = document.getElementById("detailed-products-table-body");
+    const detailedPlatformsTableBody = document.getElementById("detailed-platforms-table-body");
+    const detailedCampaignsTableBody = document.getElementById("detailed-campaigns-table-body");
+
+    const addSelectOptions = (selectElement, values) => {
+      values.forEach((value) => {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = value;
+        selectElement.appendChild(option);
+      });
+    };
+
+    addSelectOptions(filterPlatform, [...new Set(detailedRecords.map((record) => record.platform))]);
+    addSelectOptions(filterProduct, [...new Set(detailedRecords.map((record) => record.product))]);
+    addSelectOptions(filterCampaign, [...new Set(detailedRecords.map((record) => record.campaign))]);
+
+    const allDates = detailedRecords.map((record) => record.date).sort();
+    const minDate = allDates[0];
+    const maxDate = allDates[allDates.length - 1];
+
+    filterStartDate.min = minDate;
+    filterStartDate.max = maxDate;
+    filterEndDate.min = minDate;
+    filterEndDate.max = maxDate;
+    filterStartDate.value = minDate;
+    filterEndDate.value = maxDate;
+
+    const getFilteredRecords = () => {
+      return detailedRecords.filter((record) => {
+        const platformMatch = filterPlatform.value === "all" || record.platform === filterPlatform.value;
+        const productMatch = filterProduct.value === "all" || record.product === filterProduct.value;
+        const campaignMatch = filterCampaign.value === "all" || record.campaign === filterCampaign.value;
+        const startDateMatch = !filterStartDate.value || record.date >= filterStartDate.value;
+        const endDateMatch = !filterEndDate.value || record.date <= filterEndDate.value;
+        return platformMatch && productMatch && campaignMatch && startDateMatch && endDateMatch;
+      });
+    };
+
+    const createEmptyRow = (colspan) => {
+      return `<tr><td colspan="${colspan}" class="px-2 py-4 text-center text-sm text-slate-500">No hay datos para los filtros seleccionados.</td></tr>`;
+    };
+
+    const aggregateRecords = (records, keyFn) => {
+      const map = new Map();
+      records.forEach((record) => {
+        const key = keyFn(record);
+        if (!map.has(key)) {
+          map.set(key, {
+            key,
+            platform: record.platform,
+            reach: 0,
+            clicks: 0,
+            conversions: 0,
+            revenue: 0,
+            commission: 0,
+            spend: 0,
+            engagementWeighted: 0,
+            priceWeighted: 0
+          });
+        }
+        const group = map.get(key);
+        group.reach += record.reach;
+        group.clicks += record.clicks;
+        group.conversions += record.conversions;
+        group.revenue += record.revenue;
+        group.commission += record.commission;
+        group.spend += record.spend;
+        group.engagementWeighted += record.engagement * record.reach;
+        group.priceWeighted += record.price * record.conversions;
+      });
+
+      return [...map.values()].map((group) => {
+        const engagement = group.reach ? group.engagementWeighted / group.reach : 0;
+        const ctrValue = group.reach ? (group.clicks / group.reach) * 100 : 0;
+        const conversionRateValue = group.clicks ? (group.conversions / group.clicks) * 100 : 0;
+        const roiValue = group.spend ? ((group.revenue - group.spend) / group.spend) * 100 : 0;
+        const avgPrice = group.conversions ? group.priceWeighted / group.conversions : 0;
+        return { ...group, engagement, ctrValue, conversionRateValue, roiValue, avgPrice };
+      });
+    };
+
+    const renderDetailedTables = () => {
+      const filtered = getFilteredRecords();
+      filteredRecordsSummary.textContent = `Registros filtrados: ${formatNumber(filtered.length)} | Rango: ${filterStartDate.value || "-"} a ${filterEndDate.value || "-"}`;
+
+      const productGroups = aggregateRecords(filtered, (record) => record.product).sort((a, b) => b.revenue - a.revenue);
+      const platformGroups = aggregateRecords(filtered, (record) => record.platform).sort((a, b) => b.roiValue - a.roiValue);
+      const campaignGroups = aggregateRecords(filtered, (record) => record.campaign).sort((a, b) => b.roiValue - a.roiValue);
+
+      if (!productGroups.length) {
+        detailedProductsTableBody.innerHTML = createEmptyRow(9);
+      } else {
+        detailedProductsTableBody.innerHTML = productGroups.map((group) => {
+          return `
+            <tr class="border-t border-slate-100">
+              <td class="px-2 py-2">${group.key}</td>
+              <td class="px-2 py-2">${formatMoney(group.avgPrice)}</td>
+              <td class="px-2 py-2">${formatNumber(group.reach)}</td>
+              <td class="px-2 py-2">${formatNumber(group.clicks)}</td>
+              <td class="px-2 py-2">${formatNumber(group.conversions)}</td>
+              <td class="px-2 py-2">${formatMoney(group.revenue)}</td>
+              <td class="px-2 py-2">${formatMoney(group.commission)}</td>
+              <td class="px-2 py-2">${formatPercent(group.engagement)}</td>
+              <td class="px-2 py-2">${formatPercent(group.roiValue)}</td>
+            </tr>
+          `;
+        }).join("");
+      }
+
+      if (!platformGroups.length) {
+        detailedPlatformsTableBody.innerHTML = createEmptyRow(10);
+      } else {
+        detailedPlatformsTableBody.innerHTML = platformGroups.map((group) => {
+          return `
+            <tr class="border-t border-slate-100">
+              <td class="px-2 py-2">${group.key}</td>
+              <td class="px-2 py-2">${formatNumber(group.reach)}</td>
+              <td class="px-2 py-2">${formatNumber(group.clicks)}</td>
+              <td class="px-2 py-2">${formatNumber(group.conversions)}</td>
+              <td class="px-2 py-2">${formatPercent(group.ctrValue)}</td>
+              <td class="px-2 py-2">${formatPercent(group.conversionRateValue)}</td>
+              <td class="px-2 py-2">${formatMoney(group.revenue)}</td>
+              <td class="px-2 py-2">${formatMoney(group.commission)}</td>
+              <td class="px-2 py-2">${formatPercent(group.engagement)}</td>
+              <td class="px-2 py-2">${formatPercent(group.roiValue)}</td>
+            </tr>
+          `;
+        }).join("");
+      }
+
+      if (!campaignGroups.length) {
+        detailedCampaignsTableBody.innerHTML = createEmptyRow(10);
+      } else {
+        detailedCampaignsTableBody.innerHTML = campaignGroups.map((group) => {
+          const campaignRecords = filtered.filter((record) => record.campaign === group.key);
+          const topProductByConversions = campaignRecords.sort((a, b) => b.conversions - a.conversions)[0]?.product || "-";
+          return `
+            <tr class="border-t border-slate-100">
+              <td class="px-2 py-2">${group.key}</td>
+              <td class="px-2 py-2">${group.platform}</td>
+              <td class="px-2 py-2">${topProductByConversions}</td>
+              <td class="px-2 py-2">${formatNumber(group.reach)}</td>
+              <td class="px-2 py-2">${formatNumber(group.clicks)}</td>
+              <td class="px-2 py-2">${formatNumber(group.conversions)}</td>
+              <td class="px-2 py-2">${formatMoney(group.revenue)}</td>
+              <td class="px-2 py-2">${formatMoney(group.commission)}</td>
+              <td class="px-2 py-2">${formatPercent(group.engagement)}</td>
+              <td class="px-2 py-2">${formatPercent(group.roiValue)}</td>
+            </tr>
+          `;
+        }).join("");
+      }
+    };
+
+    [filterPlatform, filterProduct, filterCampaign, filterStartDate, filterEndDate].forEach((element) => {
+      element.addEventListener("change", renderDetailedTables);
+    });
+
+    filterReset.addEventListener("click", () => {
+      filterPlatform.value = "all";
+      filterProduct.value = "all";
+      filterCampaign.value = "all";
+      filterStartDate.value = minDate;
+      filterEndDate.value = maxDate;
+      renderDetailedTables();
+    });
+
+    renderDetailedTables();
+  </script>
 </body>
 </html>
